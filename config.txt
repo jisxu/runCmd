@@ -1,0 +1,14 @@
+[settings]
+concurrency=3
+
+[update]
+echo "开始更新docker"
+docker compose pull
+docker compose up -d
+echo "更新完成"
+
+[reboot]
+echo "重启"
+docker compose down
+docker compose up -d
+echo "重启完成"
